@@ -33,7 +33,7 @@ export default function Blog() {
         >
           Playlist of the day:{' '}
           <a
-            class="text-body-compact-02"
+            class="text-body-compact-02 hover:underline"
             href="https://open.spotify.com/playlist/1NRcZIuac3CcB8lKzmdmoh"
             style={{ color: 'var(--accent-11)' }}
           >
