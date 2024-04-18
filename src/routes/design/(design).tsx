@@ -2,23 +2,23 @@ import { sortBy } from 'lodash-es'
 import { For } from 'solid-js'
 
 const sizes = {
-  xs: '0.75rem',
-  sm: '0.875rem',
-  base: '1rem',
-  md: '1.125rem',
-  lg1: '1.25rem',
-  lg2: '1.5rem',
-  lg3: '1.75rem',
-  xl1: '2rem',
-  xl2: '2.25rem',
-  xl3: '2.625rem',
-  xxl1: '3rem',
-  xxl2: '3.375rem',
-  xxl3: '3.75rem',
-  xxxl1: '4.25rem',
-  xxxl2: '4.75rem',
-  xxxx1: '5.25rem',
-  xxxx2: '5.75rem',
+  xs: '0.75rem', // 1
+  sm: '0.875rem', // 2
+  base: '1rem', // 3
+  md: '1.125rem', // 4
+  lg1: '1.25rem', // 5
+  lg2: '1.5rem', // 6
+  lg3: '1.75rem', // 7
+  xl1: '2rem', // 8
+  xl2: '2.25rem', // 9
+  xl3: '2.625rem', // 10
+  xxl1: '3rem', // 11
+  xxl2: '3.375rem', // 12
+  xxl3: '3.75rem', // 13
+  xxxl1: '4.25rem', // 14
+  xxxl2: '4.75rem', // 15
+  xxxx1: '5.25rem', // 16
+  xxxx2: '5.75rem', // 17
 }
 
 export default function Design() {
@@ -39,20 +39,7 @@ export default function Design() {
               }}
             >
               <span style={{ 'font-size': '12px', width: '100px' }}>{key}</span>
-              <span>
-                {' '}
-                Everyone has the right to freedom of thought, conscience and
-                religion; this right includes freedom to change his religion or
-                belief, and freedom, either alone or in community with others
-                and in public or private, to manifest his religion or belief in
-                teaching, practice, worship and observance. Everyone has the
-                right to freedom of opinion and expression; this right includes
-                freedom to hold opinions without interference and to seek,
-                receive and impart information and ideas through any media and
-                regardless of frontiers. Everyone has the right to rest and
-                leisure, including reasonable limitation of working hours and
-                periodic holidays with pay.{' '}
-              </span>
+              <span>Hello world!</span>
             </li>
           )}
         </For>
