@@ -16,3 +16,6 @@ export function themify() {
     document.documentElement.setAttribute('data-theme', theme)
   }
 }
+
+export const init =
+  '!function(){var t=localStorage.getItem("theme")||"light";document.documentElement.setAttribute("data-theme", t)}();'
