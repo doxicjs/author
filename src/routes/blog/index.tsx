@@ -12,7 +12,7 @@ export default function Blog() {
           background:
             'repeating-linear-gradient(to right, var(--accent-a7), var(--accent-9), var(--accent-a7));',
           'background-size': '200% 200%',
-          animation: 'gradient 3s ease-out infinite',
+          animation: 'gradient 3s ease-in-out infinite',
         }}
       >
         <div
