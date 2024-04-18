@@ -39,11 +39,13 @@ export default createHandler(() => (
           {/* FONT END */}
         </head>
         <body
-          class="dark:bg-neutral-950 dark:text-neutral-50 bg-neutral-50 text-neutral-950 antialiased"
+          class="antialiased"
           style={{
             margin: 0,
             padding: 0,
             'font-optical-sizing': 'auto',
+            'background-color': 'var(--color-background);',
+            color: 'var(--neutral-12);',
           }}
         >
           <div
