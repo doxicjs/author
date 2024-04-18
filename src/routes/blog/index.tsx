@@ -5,14 +5,25 @@ export default function Blog() {
     <main class="w-full mx-auto grow max-w-[64ch] py-12">
       <button
         onClick={toggleTheme}
-        class="px-4 py-3 text-body-compact-02 border"
+        class="p-[1px] text-body-compact-02"
         style={{
-          'border-color': 'var(--accent-7)',
           color: 'var(--accent-12)',
-          background: 'var(--accent-3);',
+          'border-radius': '3px',
+          background:
+            'repeating-linear-gradient(to right, var(--accent-a7), var(--accent-9), var(--accent-a7));',
+          'background-size': '200% 200%',
+          animation: 'gradient 3s ease-out infinite',
         }}
       >
-        Toggle Theme
+        <div
+          class="px-4 py-3"
+          style={{
+            background: 'var(--accent-3)',
+            'border-radius': '2px',
+          }}
+        >
+          Toggle Theme
+        </div>
       </button>
       <h1 class="text-heading-07">Issue 2</h1>
 
@@ -47,7 +58,7 @@ export default function Blog() {
         style={{ color: 'var(--neutral-12);' }}
       >
         Welcome to my devlog where I'll go through my though process of dealing
-        with day to day dev problems
+        with day to day dev problems.
       </p>
 
       <h2 class="text-heading-04 mt-11">On automations</h2>
@@ -61,6 +72,7 @@ export default function Blog() {
           'border-color': 'var(--accent-6);',
           'background-color': 'var(--accent-3)',
           color: 'var(--accent-12)',
+          'border-radius': '3px',
         }}
       >
         Automations are essential for a sustainable development environment. I'm
@@ -92,6 +104,7 @@ export default function Blog() {
           'border-color': 'var(--accent-6);',
           'background-color': 'var(--accent-3)',
           color: 'var(--accent-12)',
+          'border-radius': '3px',
         }}
       >
         All software needs an update at some point
