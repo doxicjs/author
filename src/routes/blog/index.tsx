@@ -29,6 +29,7 @@ export default function Blog() {
 
       <figure>
         <iframe
+          title="Spotify Playlist Embed"
           style="border-radius:12px"
           src="https://open.spotify.com/embed/playlist/1NRcZIuac3CcB8lKzmdmoh?utm_source=generator"
           width="100%"
