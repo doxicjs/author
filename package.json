@@ -10,9 +10,11 @@
     "@solidjs/meta": "^0.29.3",
     "@solidjs/router": "^0.13.2",
     "@solidjs/start": "^1.0.0-rc.0",
+    "clsx": "^2.1.0",
     "lodash-es": "^4.17.21",
     "solid-js": "^1.8.16",
     "solid-mdx": "^0.0.7",
+    "tailwind-merge": "^2.2.2",
     "vinxi": "^0.3.11"
   },
   "engines": {

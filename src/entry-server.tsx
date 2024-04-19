@@ -20,34 +20,23 @@ export default createHandler(() => (
             href="https://fonts.gstatic.com"
             crossorigin="anonymous"
           />
-          {/* MEDIA PRINT SKIPS CSS ON PAGE RENDERING & LOAD CSS ON LOAD */}
           <link
-            href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
-            rel="stylesheet"
-            media="print"
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lexend:wght@100..900&display=swap"
+            rel="preload"
+            as="style"
             // @ts-expect-error: we want onload treated as an html attr
             onload="this.onload=null;this.rel='stylesheet'"
           />
-          {/* IF USER DISABLED JS, FONT WILL LOAD */}
           <noscript>
             <link
-              href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+              href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lexend:wght@100..900&display=swap"
               rel="stylesheet"
               type="text/css"
             />
           </noscript>
           {/* FONT END */}
         </head>
-        <body
-          class="antialiased"
-          style={{
-            margin: 0,
-            padding: 0,
-            'font-optical-sizing': 'auto',
-            'background-color': 'var(--color-background);',
-            color: 'var(--neutral-12);',
-          }}
-        >
+        <body class="antialiased bg-background text-neutral-12 font-display">
           <div
             id="app"
             class="flex min-h-screen w-full flex-col"

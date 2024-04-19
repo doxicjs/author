@@ -1,13 +1,13 @@
-import { toggleTheme } from '~/scripts/themify'
+import Text from '~/lib/Text/Text'
+// import { toggleTheme } from '~/scripts/themify'
 
 export default function Blog() {
   return (
     <main class="w-full mx-auto grow max-w-[64ch] py-12">
-      <button
+      {/* <button
         onClick={toggleTheme}
-        class="p-[1px] text-body-compact-02"
+        class="p-[1px] text-body-compact-02 shadow shadow-primary-3 text-primary-12"
         style={{
-          color: 'var(--accent-12)',
           'border-radius': '3px',
           background:
             'repeating-linear-gradient(to right, var(--accent-a7), var(--accent-9), var(--accent-a7));',
@@ -16,16 +16,17 @@ export default function Blog() {
         }}
       >
         <div
-          class="px-4 py-3"
+          class="px-4 py-3 bg-primary-3 rounded"
           style={{
-            background: 'var(--accent-3)',
             'border-radius': '2px',
           }}
         >
           Toggle Theme
         </div>
-      </button>
-      <h1 class="text-heading-07">Issue 2</h1>
+      </button> */}
+      <Text as="h1" variant="heading-07">
+        Issue 2
+      </Text>
 
       <figure>
         <iframe
@@ -39,112 +40,110 @@ export default function Blog() {
           loading="lazy"
           class="mt-6"
         ></iframe>
-        <figcaption
-          class="text-label-01 mt-5"
-          style={{ color: 'var(--neutral-11)' }}
-        >
+        <Text as="figcaption" variant="label-01" class="text-neutral-11 mt-5">
           Playlist of the day:{' '}
-          <a
-            class="text-body-compact-02 hover:underline"
+          <Text
+            as="a"
             href="https://open.spotify.com/playlist/1NRcZIuac3CcB8lKzmdmoh"
-            style={{ color: 'var(--accent-11)' }}
+            class="text-primary-11"
+            variant="body-compact-02"
           >
             Open Spotify
-          </a>
-        </figcaption>
+          </Text>
+        </Text>
       </figure>
 
-      <p
-        class="text-fluid-para-01 mt-6"
-        style={{ color: 'var(--neutral-12);' }}
-      >
-        Welcome to my devlog where I'll go through my though process of dealing
+      <Text as="p" variant="fluid-paragraph-01" class="text-neutral-12 mt-6">
+        Welcome to my devlog where I'll go through my thought process of dealing
         with day to day dev problems.
-      </p>
+      </Text>
 
-      <h2 class="text-heading-04 mt-11">On automations</h2>
-      <i class="block text-body-02" style={{ color: 'var(--accent-12)' }}>
+      <Text as="h2" variant="heading-04" class="mt-11">
+        On automations
+      </Text>
+      <Text as="i" variant="body-02" class="text-primary-12">
         Humans make mistakes
-      </i>
+      </Text>
 
-      <blockquote
-        class="text-body-01 border-l-[3px] p-4 my-6"
-        style={{
-          'border-color': 'var(--accent-6);',
-          'background-color': 'var(--accent-3)',
-          color: 'var(--accent-12)',
-          'border-radius': '3px',
-        }}
+      <Text
+        as="blockquote"
+        class="rounded text-primary-12 border-l-3 border-primary-6 bg-primary-3 p-4 my-6"
+        variant="body-01"
       >
         Automations are essential for a sustainable development environment. I'm
         always trying to keep consistency when it comes to file naming,
         structuring and all that. Automated file creations are so far saving a
         lot of time and resource.
-      </blockquote>
+      </Text>
 
-      <p class="text-body-02 mt-6" style={{ color: 'var(--neutral-11);' }}>
+      <Text as="p" variant="body-02" class="text-neutral-11 mt-6">
         Feeling great after setting up Obsidian.md templates successfully. First
         setup I created was the template using an Obsidian plugin called
         `Templater`. Purpose of this template was to help me embed YAML
         frontmatter (smartly) and increment issue numbers (assign ids) with just
         a click.
-      </p>
+      </Text>
 
-      <p class="text-body-02 mt-6" style={{ color: 'var(--neutral-11);' }}>
+      <Text as="p" variant="body-02" class="text-neutral-11 mt-6">
         This document was in fact created with the said template.
-      </p>
+      </Text>
 
-      <h3 class="text-heading-03 mt-10">Disadvantages</h3>
-      <i class="block text-body-02" style={{ color: 'var(--accent-12)' }}>
+      <Text as="h3" variant="heading-03" class="text-neutral-12 mt-10">
+        Disadvantages
+      </Text>
+      <Text as="i" variant="body-02" class="text-primary-12">
         Ah, there's the catch...
-      </i>
+      </Text>
 
-      <blockquote
-        class="text-body-01 border-l-[3px] p-4 my-6"
-        style={{
-          'border-color': 'var(--accent-6);',
-          'background-color': 'var(--accent-3)',
-          color: 'var(--accent-12)',
-          'border-radius': '3px',
-        }}
+      <Text
+        as="blockquote"
+        class="rounded text-primary-12 border-l-3 border-primary-6 bg-primary-3 p-4 my-6"
+        variant="body-01"
       >
         All software needs an update at some point
-      </blockquote>
+      </Text>
 
-      <p class="text-body-02 mt-6" style={{ color: 'var(--neutral-11);' }}>
+      <Text as="p" variant="body-02" class="text-neutral-11 mt-6">
         First of all, automations may or may not depend on other software. When
         that software version *expires* there's the worry of checking if the
         version update breaks your automation. Not only do you have to worry
         about keeping your own environment up-to-date but also keep track of
         your automation files.
-      </p>
+      </Text>
 
-      <p class="text-body-02 mt-6" style={{ color: 'var(--neutral-11);' }}>
+      <Text as="p" variant="body-02" class="text-neutral-11 mt-6">
         Secondly, you either have to write an automation that is hard to break
         (has validations) or write an automation so small that you can rewrite
         it back.
-      </p>
+      </Text>
 
-      <h3 class="text-heading-03 mt-10">Solution?</h3>
-      <i class="block text-body-02" style={{ color: 'var(--accent-12)' }}>
+      <Text as="h3" variant="heading-03" class="text-neutral-12 mt-10">
+        Solution?
+      </Text>
+      <Text as="i" variant="body-02" class="text-primary-12">
         There's always a way
-      </i>
+      </Text>
 
-      <p class="text-body-02 mt-6" style={{ color: 'var(--neutral-11);' }}>
+      <Text as="p" variant="body-02" class="text-neutral-11 mt-6">
         Currently, I'm thinking of a way to create automations in a modular way.
         Small components, small functions that is easy to rewrite and helps
         composing such automations easier.
-      </p>
+      </Text>
 
-      <h2 class="text-heading-04 mt-11">Words before I...</h2>
-      <i class="block text-body-02" style={{ color: 'var(--accent-12)' }}>
+      <Text as="h2" variant="heading-04" class="mt-11">
+        Words before I...
+      </Text>
+      <Text as="i" variant="body-02" class="text-primary-12">
         Use the document for daily note taking
-      </i>
+      </Text>
 
-      <h2 class="text-heading-04 mt-11">Notes of the day</h2>
-      <p class="text-body-02 mt-6" style={{ color: 'var(--neutral-11);' }}>
+      <Text as="h2" variant="heading-04" class="mt-11">
+        Notes of the day
+      </Text>
+
+      <Text as="p" variant="body-02" class="text-neutral-11 mt-6">
         Didn't find time to note.
-      </p>
+      </Text>
     </main>
   )
 }
