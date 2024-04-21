@@ -24,7 +24,7 @@ export default function Blog() {
           Toggle Theme
         </div>
       </button> */}
-      <h1 class={dxText('heading-07')}>Issue 2</h1>
+      <h1 class={dxText('heading-07', 'mt-2')}>Issue 2</h1>
 
       <figure>
         <iframe
