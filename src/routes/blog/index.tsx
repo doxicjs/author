@@ -1,4 +1,4 @@
-import { dxText } from '~/lib/utils/text'
+import { dxText } from '~/lib/dx/text'
 // import { toggleTheme } from '~/scripts/themify'
 
 export default function Blog() {

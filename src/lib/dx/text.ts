@@ -1,4 +1,4 @@
-import { type TVariantMap, cn } from './cn'
+import { type TVariantMap, cn } from '../utils/cn'
 
 export type TTextVariant =
   | 'code-01'
