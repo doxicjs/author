@@ -1,0 +1,9 @@
+---
+import { getCollection } from "astro:content";
+
+const pages = await getCollection("dev-logs");
+---
+
+<ul>
+	{pages.map((page) => <a href={page.slug}>{page.data.title}</a>)}
+</ul>
