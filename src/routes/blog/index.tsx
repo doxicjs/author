@@ -1,29 +1,8 @@
 import { dxText } from '~/lib/dx/text'
-// import { toggleTheme } from '~/scripts/themify'
 
 export default function Blog() {
   return (
     <main class="w-full mx-auto grow max-w-[64ch] py-12">
-      {/* <button
-        onClick={toggleTheme}
-        class="p-[1px] text-body-compact-02 shadow shadow-primary-3 text-primary-12"
-        style={{
-          'border-radius': '3px',
-          background:
-            'repeating-linear-gradient(to right, var(--accent-a7), var(--accent-9), var(--accent-a7));',
-          'background-size': '200% 200%',
-          animation: 'gradient 3s ease-in-out infinite',
-        }}
-      >
-        <div
-          class="px-4 py-3 bg-primary-3 rounded"
-          style={{
-            'border-radius': '2px',
-          }}
-        >
-          Toggle Theme
-        </div>
-      </button> */}
       <h1 class={dxText('heading-07', 'mt-2')}>Issue 2</h1>
 
       <figure>
