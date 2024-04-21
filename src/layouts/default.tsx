@@ -1,7 +1,5 @@
 import { Suspense } from 'solid-js'
 import type { ParentProps } from 'solid-js'
-import { DropDownMenu } from '~/lib'
-import Button from '~/lib/button'
 
 export default function DefaultLayout(props: ParentProps) {
   return (
@@ -11,8 +9,6 @@ export default function DefaultLayout(props: ParentProps) {
           <ul>
             <li>Home</li>
           </ul>
-
-          <DropDownMenu></DropDownMenu>
         </nav>
       </header>
       <Suspense>{props.children}</Suspense>
