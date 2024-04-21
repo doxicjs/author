@@ -190,8 +190,7 @@
 @supports (color: color(display-p3 1 1 1)) {
   @media (color-gamut: p3) {
     :root,
-    .light,
-    .light-theme {
+    [data-theme='light'] {
       --neutral-1: oklch(95.6% 0.003 184.8);
       --neutral-2: oklch(94.2% 0.004 184.8);
       --neutral-3: oklch(91.3% 0.005 184.8);
