@@ -32,6 +32,15 @@ importers:
       astro:
         specifier: ^4.6.3
         version: 4.6.3(typescript@5.4.5)
+      clsx:
+        specifier: ^2.1.0
+        version: 2.1.0
+      lodash-es:
+        specifier: ^4.17.21
+        version: 4.17.21
+      motion:
+        specifier: ^10.17.0
+        version: 10.17.0
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -41,6 +50,9 @@ importers:
       solid-js:
         specifier: ^1.8.16
         version: 1.8.16
+      tailwind-merge:
+        specifier: ^2.3.0
+        version: 2.3.0
       tailwindcss:
         specifier: ^3.4.3
         version: 3.4.3
@@ -230,6 +242,10 @@ packages:
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
+
+  '@babel/runtime@7.24.4':
+    resolution: {integrity: sha512-dkxf7+hn8mFBwKjs9bvBlArzLVxVbS8usaPUDd5p2a9JCL9tB8OaOVN1isD4+Xyk4ns89/xeOmbQvgdK7IIVdA==}
+    engines: {node: '>=6.9.0'}
 
   '@babel/template@7.24.0':
     resolution: {integrity: sha512-Bkf2q8lMB0AFpX0NFEqSbx1OkTHf0f+0j82mkw+ZpzBnkk7e9Ql0891vlfgi+kHwOk8tQjiQHpqh4LaSa0fKEA==}
@@ -552,6 +568,24 @@ packages:
 
   '@mdx-js/mdx@3.0.1':
     resolution: {integrity: sha512-eIQ4QTrOWyL3LWEe/bu6Taqzq2HQvHcyTMaOrI95P2/LmJE7AsfPfgJGuFLPVqBUE1BC1rik3VIhU+s9u72arA==}
+
+  '@motionone/animation@10.17.0':
+    resolution: {integrity: sha512-ANfIN9+iq1kGgsZxs+Nz96uiNcPLGTXwfNo2Xz/fcJXniPYpaz/Uyrfa+7I5BPLxCP82sh7quVDudf1GABqHbg==}
+
+  '@motionone/dom@10.17.0':
+    resolution: {integrity: sha512-cMm33swRlCX/qOPHWGbIlCl0K9Uwi6X5RiL8Ma6OrlJ/TP7Q+Np5GE4xcZkFptysFjMTi4zcZzpnNQGQ5D6M0Q==}
+
+  '@motionone/easing@10.17.0':
+    resolution: {integrity: sha512-Bxe2wSuLu/qxqW4rBFS5m9tMLOw+QBh8v5A7Z5k4Ul4sTj5jAOfZG5R0bn5ywmk+Fs92Ij1feZ5pmC4TeXA8Tg==}
+
+  '@motionone/generators@10.17.0':
+    resolution: {integrity: sha512-T6Uo5bDHrZWhIfxG/2Aut7qyWQyJIWehk6OB4qNvr/jwA/SRmixwbd7SOrxZi1z5rH3LIeFFBKK1xHnSbGPZSQ==}
+
+  '@motionone/types@10.17.0':
+    resolution: {integrity: sha512-EgeeqOZVdRUTEHq95Z3t8Rsirc7chN5xFAPMYFobx8TPubkEfRSm5xihmMUkbaR2ErKJTUw3347QDPTHIW12IA==}
+
+  '@motionone/utils@10.17.0':
+    resolution: {integrity: sha512-bGwrki4896apMWIj9yp5rAS2m0xyhxblg6gTB/leWDPt+pb410W8lYWsxyurX+DH+gO1zsQsfx2su/c1/LtTpg==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -1290,6 +1324,9 @@ packages:
   hastscript@8.0.0:
     resolution: {integrity: sha512-dMOtzCEd3ABUeSIISmrETiKuyydk1w0pa+gE/uormcTpSYuaNJPbX1NU3JLyscSLjwAQM8bWMhhIlnCqnRvDTw==}
 
+  hey-listen@1.0.8:
+    resolution: {integrity: sha512-COpmrF2NOg4TBWUJ5UVyaCU2A88wEMkUPK4hNqyCkqHbxT92BbvfjoSozkAIIm6XhicGlJHhFdullInrdhwU8Q==}
+
   html-entities@2.3.3:
     resolution: {integrity: sha512-DV5Ln36z34NNTDgnz0EWGBLZENelNAtkiFA4kyNOG2tDI6Mz1uSWiq1wAKdyjnJwyDiDO7Fa2SO1CTxPXL8VxA==}
 
@@ -1476,6 +1513,9 @@ packages:
   locate-path@6.0.0:
     resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==}
     engines: {node: '>=10'}
+
+  lodash-es@4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
 
   log-symbols@5.1.0:
     resolution: {integrity: sha512-l0x2DvrW294C9uDCoQe1VSU4gf529FkSZ6leBl4TiqZH/e+0R7hSfHQBNut2mNygDgHwvYHfFLn6Oxb3VWj2rA==}
@@ -1710,6 +1750,9 @@ packages:
 
   mkdirp-classic@0.5.3:
     resolution: {integrity: sha512-gKLcREMhtuZRwRAfqP3RFW+TK4JqApVBtOIftVgjuABpAtpxhPGaDcfvbhNvD0B8iD1oUr/txX35NjcaY6Ns/A==}
+
+  motion@10.17.0:
+    resolution: {integrity: sha512-yBHYkrnJRiomuo88YQzG/v+nzFXKNlKw/Hh7uy8AV7nrYHnE07O6PEECShGbFmZvLrAOGc9qKzEDYmspDYjNWw==}
 
   ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
@@ -1966,6 +2009,9 @@ packages:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
     engines: {node: '>=8.10.0'}
 
+  regenerator-runtime@0.14.1:
+    resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
+
   rehype-parse@9.0.0:
     resolution: {integrity: sha512-WG7nfvmWWkCR++KEkZevZb/uw41E8TsH4DsY9UxsTbIXCVGbAs4S+r8FrQ+OtH5EEQAs+5UxKC42VinkmpA1Yw==}
 
@@ -2193,6 +2239,9 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
+  tailwind-merge@2.3.0:
+    resolution: {integrity: sha512-vkYrLpIP+lgR0tQCG6AP7zZXCTLc1Lnv/CCRT3BqJ9CZ3ui2++GPaGb1x/ILsINIMSYqqvrpqjUFsMNLlW99EA==}
+
   tailwindcss@3.4.3:
     resolution: {integrity: sha512-U7sxQk/n397Bmx4JHbJx/iSOOv5G+II3f1kpLpY2QeUv5DcPdcTsYLlusZfq1NthHS1c1cZoyFmmkex1rzke0A==}
     engines: {node: '>=14.0.0'}
@@ -2244,6 +2293,9 @@ packages:
     peerDependenciesMeta:
       typescript:
         optional: true
+
+  tslib@2.6.2:
+    resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
 
   tunnel-agent@0.6.0:
     resolution: {integrity: sha512-McnNiV1l8RYeY8tBgEpuodCC1mLUdbSN+CYBL7kJsJNInOP8UjDDEwdk6Mw60vdLLrr5NHKZhMAOSrR2NZuQ+w==}
@@ -2820,6 +2872,10 @@ snapshots:
       '@babel/plugin-syntax-jsx': 7.24.1(@babel/core@7.24.4)
       '@babel/types': 7.24.0
 
+  '@babel/runtime@7.24.4':
+    dependencies:
+      regenerator-runtime: 0.14.1
+
   '@babel/template@7.24.0':
     dependencies:
       '@babel/code-frame': 7.24.2
@@ -3048,6 +3104,41 @@ snapshots:
       vfile: 6.0.1
     transitivePeerDependencies:
       - supports-color
+
+  '@motionone/animation@10.17.0':
+    dependencies:
+      '@motionone/easing': 10.17.0
+      '@motionone/types': 10.17.0
+      '@motionone/utils': 10.17.0
+      tslib: 2.6.2
+
+  '@motionone/dom@10.17.0':
+    dependencies:
+      '@motionone/animation': 10.17.0
+      '@motionone/generators': 10.17.0
+      '@motionone/types': 10.17.0
+      '@motionone/utils': 10.17.0
+      hey-listen: 1.0.8
+      tslib: 2.6.2
+
+  '@motionone/easing@10.17.0':
+    dependencies:
+      '@motionone/utils': 10.17.0
+      tslib: 2.6.2
+
+  '@motionone/generators@10.17.0':
+    dependencies:
+      '@motionone/types': 10.17.0
+      '@motionone/utils': 10.17.0
+      tslib: 2.6.2
+
+  '@motionone/types@10.17.0': {}
+
+  '@motionone/utils@10.17.0':
+    dependencies:
+      '@motionone/types': 10.17.0
+      hey-listen: 1.0.8
+      tslib: 2.6.2
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
@@ -3992,6 +4083,8 @@ snapshots:
       property-information: 6.5.0
       space-separated-tokens: 2.0.2
 
+  hey-listen@1.0.8: {}
+
   html-entities@2.3.3: {}
 
   html-escaper@3.0.3: {}
@@ -4128,6 +4221,8 @@ snapshots:
   locate-path@6.0.0:
     dependencies:
       p-locate: 5.0.0
+
+  lodash-es@4.17.21: {}
 
   log-symbols@5.1.0:
     dependencies:
@@ -4625,6 +4720,13 @@ snapshots:
   mkdirp-classic@0.5.3:
     optional: true
 
+  motion@10.17.0:
+    dependencies:
+      '@motionone/animation': 10.17.0
+      '@motionone/dom': 10.17.0
+      '@motionone/types': 10.17.0
+      '@motionone/utils': 10.17.0
+
   ms@2.1.2: {}
 
   muggle-string@0.4.1: {}
@@ -4891,6 +4993,8 @@ snapshots:
   readdirp@3.6.0:
     dependencies:
       picomatch: 2.3.1
+
+  regenerator-runtime@0.14.1: {}
 
   rehype-parse@9.0.0:
     dependencies:
@@ -5207,6 +5311,10 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
+  tailwind-merge@2.3.0:
+    dependencies:
+      '@babel/runtime': 7.24.4
+
   tailwindcss@3.4.3:
     dependencies:
       '@alloc/quick-lru': 5.2.0
@@ -5290,6 +5398,8 @@ snapshots:
   tsconfck@3.0.3(typescript@5.4.5):
     optionalDependencies:
       typescript: 5.4.5
+
+  tslib@2.6.2: {}
 
   tunnel-agent@0.6.0:
     dependencies:

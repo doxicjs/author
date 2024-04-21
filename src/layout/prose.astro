@@ -1,0 +1,10 @@
+---
+import BaseLayout from "./base.astro";
+const { title } = Astro.props;
+---
+
+<BaseLayout title={title}>
+	<main class="grow max-w-prose w-full px-4 mx-auto py-12">
+		<slot />
+	</main>
+</BaseLayout>
