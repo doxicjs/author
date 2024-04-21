@@ -1,4 +1,4 @@
-import { type TVariantMap, cn } from '../utils/cn'
+import { type TVariantMap, cn } from './cn'
 
 export type TTextVariant =
   | 'code-01'
@@ -33,11 +33,6 @@ export type TTextVariant =
   | 'fluid-display-02'
   | 'fluid-display-03'
   | 'fluid-display-04'
-
-export type TTextVariants = {
-  variant: TTextVariant
-  class?: string
-}
 
 const variantMap = {
   'code-01': 'font-mono font-normal text-xs leading-1 tracking-wider',
@@ -89,7 +84,5 @@ const variantMap = {
     'font-display font-light text-5xl md:text-9xl lg:text-12xl xl:text-13xl 2xl:text-14xl leading-12 md:leading-16 lg:leading-19 xl:leading-20 2xl:leading-21 tracking-normal lg:tracking-tight 2xl:tracking-tightest',
 } satisfies TVariantMap<TTextVariant>
 
-export const textVariants = (args: TTextVariants) => {
-  const { variant, ...rest } = args
-  return cn(variantMap[variant], rest.class)
-}
+export const dxText = (variant: TTextVariant, className?: string) =>
+  cn(variantMap[variant], className)

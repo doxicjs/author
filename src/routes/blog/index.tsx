@@ -1,4 +1,4 @@
-import Text from '~/lib/Text/Text'
+import { dxText } from '~/lib/utils/text'
 // import { toggleTheme } from '~/scripts/themify'
 
 export default function Blog() {
@@ -24,9 +24,7 @@ export default function Blog() {
           Toggle Theme
         </div>
       </button> */}
-      <Text as="h1" variant="heading-07">
-        Issue 2
-      </Text>
+      <h1 class={dxText('heading-07')}>Issue 2</h1>
 
       <figure>
         <iframe
@@ -40,110 +38,98 @@ export default function Blog() {
           loading="lazy"
           class="mt-6"
         ></iframe>
-        <Text as="figcaption" variant="label-01" class="text-neutral-11 mt-5">
+        <figcaption class={dxText('label-01', 'text-neutral-11 mt-5')}>
           Playlist of the day:{' '}
-          <Text
-            as="a"
+          <a
             href="https://open.spotify.com/playlist/1NRcZIuac3CcB8lKzmdmoh"
-            class="text-primary-11"
-            variant="body-compact-02"
+            class={dxText('body-compact-02', 'text-primary-11')}
           >
             Open Spotify
-          </Text>
-        </Text>
+          </a>
+        </figcaption>
       </figure>
 
-      <Text as="p" variant="fluid-paragraph-01" class="text-neutral-12 mt-6">
+      <p class={dxText('fluid-paragraph-01', 'text-neutral-12 mt-6')}>
         Welcome to my devlog where I'll go through my thought process of dealing
         with day to day dev problems.
-      </Text>
+      </p>
 
-      <Text as="h2" variant="heading-04" class="mt-11">
-        On automations
-      </Text>
-      <Text as="i" variant="body-02" class="text-primary-12">
-        Humans make mistakes
-      </Text>
+      <h2 class={dxText('heading-04', 'mt-11')}>On automations</h2>
+      <i class={dxText('body-02', 'text-primary-12')}>Humans make mistakes</i>
 
-      <Text
-        as="blockquote"
-        class="rounded text-primary-12 border-l-3 border-primary-6 bg-primary-3 p-4 my-6"
-        variant="body-01"
+      <blockquote
+        class={dxText(
+          'body-01',
+          'rounded text-primary-12 border-l-3 border-primary-6 bg-primary-3 p-4 my-6'
+        )}
       >
         Automations are essential for a sustainable development environment. I'm
         always trying to keep consistency when it comes to file naming,
         structuring and all that. Automated file creations are so far saving a
         lot of time and resource.
-      </Text>
+      </blockquote>
 
-      <Text as="p" variant="body-02" class="text-neutral-11 mt-6">
+      <p class={dxText('body-02', 'text-neutral-11 mt-6')}>
         Feeling great after setting up Obsidian.md templates successfully. First
         setup I created was the template using an Obsidian plugin called
         `Templater`. Purpose of this template was to help me embed YAML
         frontmatter (smartly) and increment issue numbers (assign ids) with just
         a click.
-      </Text>
+      </p>
 
-      <Text as="p" variant="body-02" class="text-neutral-11 mt-6">
+      <p class={dxText('body-02', 'text-neutral-11 mt-6')}>
         This document was in fact created with the said template.
-      </Text>
+      </p>
 
-      <Text as="h3" variant="heading-03" class="text-neutral-12 mt-10">
+      <h3 class={dxText('heading-03', 'text-neutral-12 mt-10')}>
         Disadvantages
-      </Text>
-      <Text as="i" variant="body-02" class="text-primary-12">
+      </h3>
+      <i class={dxText('body-02', 'text-primary-12')}>
         Ah, there's the catch...
-      </Text>
+      </i>
 
-      <Text
-        as="blockquote"
-        class="rounded text-primary-12 border-l-3 border-primary-6 bg-primary-3 p-4 my-6"
-        variant="body-01"
+      <blockquote
+        class={dxText(
+          'body-01',
+          'rounded text-primary-12 border-l-3 border-primary-6 bg-primary-3 p-4 my-6'
+        )}
       >
         All software needs an update at some point
-      </Text>
+      </blockquote>
 
-      <Text as="p" variant="body-02" class="text-neutral-11 mt-6">
+      <p class={dxText('body-02', 'text-neutral-11 mt-6')}>
         First of all, automations may or may not depend on other software. When
         that software version *expires* there's the worry of checking if the
         version update breaks your automation. Not only do you have to worry
         about keeping your own environment up-to-date but also keep track of
         your automation files.
-      </Text>
+      </p>
 
-      <Text as="p" variant="body-02" class="text-neutral-11 mt-6">
+      <p class={dxText('body-02', 'text-neutral-11 mt-6')}>
         Secondly, you either have to write an automation that is hard to break
         (has validations) or write an automation so small that you can rewrite
         it back.
-      </Text>
+      </p>
 
-      <Text as="h3" variant="heading-03" class="text-neutral-12 mt-10">
-        Solution?
-      </Text>
-      <Text as="i" variant="body-02" class="text-primary-12">
-        There's always a way
-      </Text>
+      <h3 class={dxText('heading-03', 'text-neutral-12 mt-10')}>Solution?</h3>
+      <i class={dxText('body-02', 'text-primary-12')}>There's always a way</i>
 
-      <Text as="p" variant="body-02" class="text-neutral-11 mt-6">
+      <p class={dxText('body-02', 'text-neutral-11 mt-6')}>
         Currently, I'm thinking of a way to create automations in a modular way.
         Small components, small functions that is easy to rewrite and helps
         composing such automations easier.
-      </Text>
+      </p>
 
-      <Text as="h2" variant="heading-04" class="mt-11">
-        Words before I...
-      </Text>
-      <Text as="i" variant="body-02" class="text-primary-12">
+      <h2 class={dxText('heading-04', 'mt-11')}>Words before I...</h2>
+      <i class={dxText('body-02', 'text-primary-12')}>
         Use the document for daily note taking
-      </Text>
+      </i>
 
-      <Text as="h2" variant="heading-04" class="mt-11">
-        Notes of the day
-      </Text>
+      <h2 class={dxText('heading-04', 'mt-11')}>Notes of the day</h2>
 
-      <Text as="p" variant="body-02" class="text-neutral-11 mt-6">
+      <p class={dxText('body-02', 'text-neutral-11 mt-6')}>
         Didn't find time to note.
-      </Text>
+      </p>
     </main>
   )
 }
