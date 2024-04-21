@@ -11,7 +11,7 @@ const pages = await getCollection("dev-logs");
 		{
 			pages.map((page) => (
 				<li class={dxText("body-01")}>
-					<a href={page.slug}>{page.data.title}</a>
+					<a href={`/dev-logs/${page.slug}`}>{page.data.title}</a>
 				</li>
 			))
 		}
