@@ -1,4 +1,4 @@
-import { type TVariantMap, cn } from '../utils/cn'
+import { type TVariantMap, cn } from '../utils'
 
 export type TTextVariant =
   | 'code-01'
@@ -43,9 +43,9 @@ const variantMap = {
   'helper-02': 'font-display font-normal text-sm leading-2 tracking-wide',
   'legal-01': 'font-display font-normal text-xs leading-1 tracking-wider',
   'legal-02': 'font-display font-normal text-sm leading-2 tracking-wide',
-  'body-compact-01': 'font-sans font-normal text-sm leading-2 tracking-wide',
+  'body-compact-01': 'font-display font-normal text-sm leading-2 tracking-wide',
   'body-compact-02':
-    'font-sans font-normal text-base leading-4 tracking-normal',
+    'font-display font-normal text-base leading-4 tracking-normal',
   'body-01': 'font-sans font-normal text-sm leading-3 tracking-wide',
   'body-02': 'font-sans font-normal text-base leading-5 tracking-normal',
   'heading-compact-01':

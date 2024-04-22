@@ -1,0 +1,20 @@
+---
+import { getCollection } from 'astro:content'
+import ProseLayout from '@/layout/prose.astro'
+import { components } from '@/lib/mdx'
+
+export async function getStaticPaths() {
+	const devLogEntries = await getCollection('devlog')
+	return devLogEntries.map((entry) => ({
+		params: { slug: entry.slug },
+		props: { entry },
+	}))
+}
+
+const { entry } = Astro.props
+const { Content } = await entry.render()
+---
+
+<ProseLayout title={entry.data.title}>
+	<Content components={components} />
+</ProseLayout>

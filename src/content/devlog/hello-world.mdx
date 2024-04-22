@@ -1,0 +1,83 @@
+---
+id: 2
+author: jskhan
+title: issue_2
+alias: [issue_2, issue_22-09-29]
+tags: [issue, plugins, obsidian, automation]
+created_at: 22-09-29
+previous_issue: issue_1
+previous_created_at: 22-09/27
+---
+
+# Issue 2
+
+<figure>
+<Spotify src="https://open.spotify.com/embed/playlist/1NRcZIuac3CcB8lKzmdmoh?utm_source=generator" />
+<figcaption>
+<Caption>Playlist of the day: [Open Spotify](https://open.spotify.com/playlist/1NRcZIuac3CcB8lKzmdmoh "Spotify")</Caption>
+</figcaption>
+</figure>
+
+<Fluid>Welcome to my devlog where I'll go through my thought process of dealing with day to day dev problems.</Fluid>
+
+## On automations
+
+<SubTitle>Humans make mistakes</SubTitle>
+
+> Automations are essential for a sustainable development environment. I'm always trying to keep consistency when it comes to file naming, structuring and all that. Automated file creations are so far saving a lot of time and resource.
+
+Feeling great after setting up Obsidian.md templates successfully. First setup I created was the template using an Obsidian plugin called `Templater`. Purpose of this template was to help me embed YAML frontmatter (smartly) and increment issue numbers (assign ids) with just a click.
+
+This document was in fact created with the said template.
+
+### Disadvantages
+
+<SubTitle>Ah, there's the catch...</SubTitle>
+
+```tsx
+import { dxText } from '../dx/text'
+
+export default function Fluid(props: { text: string }) {
+  return (
+    <p class={dxText('fluid-paragraph-01', 'text-neutral-12 mt-6')}>
+      {props.text}
+    </p>
+  )
+}
+```
+
+> All software needs an update at some point
+
+First of all, automations may or may not depend on other software. When that software version _expires_ there's the worry of checking if the version update breaks your automation. Not only do you have to worry about keeping your own environment up-to-date but also keep track of your automation files.
+
+Secondly, you either have to write an automation that is hard to break (has validations) or write an automation so small that you can rewrite it back.
+
+- Who are we?
+- What is that?
+- How are you?
+- Where are they?
+- When is it?
+
+### Solution?
+
+<SubTitle>There's always a way</SubTitle>
+
+Currently, I'm thinking of a way to create automations in a modular way. Small components, small functions that is easy to rewrite and helps composing such automations easier.
+
+#### Chapter 1
+Feeling great after setting up Obsidian.md templates successfully. First setup I created was the template using an Obsidian plugin called Templater. Purpose of this template was to help me embed YAML frontmatter (smartly) and increment issue numbers (assign ids) with just a click.
+
+#### Chapter 2
+
+Welcome to my devlog where I’ll go through my thought process of dealing with day to day dev problems.
+
+---
+
+## Words before I...
+<SubTitle>Use the document for daily note taking</SubTitle>
+
+[go top](#issue-2)
+
+## Notes of the day
+
+Didn't find time to note.

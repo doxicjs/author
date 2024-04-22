@@ -1,16 +1,17 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
+	darkMode: ['class'],
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	darkMode: ['selector', '[data-theme="dark"]'],
+	prefix: '',
 	theme: {
 		fontFamily: {
 			sans: ["'Lexend'", "-apple-system", "BlinkMacSystemFont", "avenir next", "avenir",
 				"segoe ui", "helvetica neue", "helvetica", "Cantarell", "Ubuntu", "roboto", "noto", "arial",
 				"sans-serif"],
-			display: ["'IBM Plex Sans'", "-apple-system", "BlinkMacSystemFont", "avenir next", "avenir",
+			display: ["-apple-system", "BlinkMacSystemFont", "avenir next", "avenir",
 				"segoe ui", "helvetica neue", "helvetica", "Cantarell", "Ubuntu", "roboto", "noto", "arial",
 				"sans-serif"],
-			mono: ["'IBM Plex Mono'", "Menlo", "Consolas", "Monaco", "Liberation Mono", "Lucida Console",
+			mono: ["Menlo", "Consolas", "Monaco", "Liberation Mono", "Lucida Console",
 				"monospace"],
 		},
 		fontSize: {
@@ -64,6 +65,7 @@ export default {
 			"wider": ".32px",
 		},
 		spacing: {
+			'0': "0px",
 			'1': '0.125rem',
 			'2': '0.25rem',
 			'3': '0.5rem',
@@ -171,5 +173,5 @@ export default {
 			"2xl": "1584px",
 		}
 	},
-	plugins: []
+	plugins: [require('tailwindcss-animate')],
 }

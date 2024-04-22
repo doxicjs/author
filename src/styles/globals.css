@@ -1,0 +1,316 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --accent-1: #ecf2f0;
+    --accent-2: #e4efeb;
+    --accent-3: #caede2;
+    --accent-4: #b1e8d7;
+    --accent-5: #97e0ca;
+    --accent-6: #7bd4bb;
+    --accent-7: #54c3a7;
+    --accent-8: #00af8e;
+    --accent-9: #03c4a1;
+    --accent-10: #00b896;
+    --accent-11: #006a54;
+    --accent-12: #014538;
+
+    --accent-a1: #14b57508;
+    --accent-a2: #04a56510;
+    --accent-a3: #06cc8c2c;
+    --accent-a4: #03c98b46;
+    --accent-a5: #01c08661;
+    --accent-a6: #01b4817e;
+    --accent-a7: #00aa7fa7;
+    --accent-a8: #00af8e;
+    --accent-a9: #00c3a0fc;
+    --accent-a10: #00b896;
+    --accent-a11: #006a54;
+    --accent-a12: #004437fe;
+
+    --accent-contrast: #fff;
+    --accent-surface: #e0eee9cc;
+    --accent-indicator: #03c4a1;
+    --accent-track: #03c4a1;
+  }
+
+  @supports (color: color(display-p3 1 1 1)) {
+    @media (color-gamut: p3) {
+      :root {
+        --accent-1: oklch(95.6% 0.007 173.7);
+        --accent-2: oklch(94.3% 0.013 173.7);
+        --accent-3: oklch(91.8% 0.039 173.7);
+        --accent-4: oklch(88.8% 0.061 173.7);
+        --accent-5: oklch(85.2% 0.079 173.7);
+        --accent-6: oklch(80.6% 0.094 173.7);
+        --accent-7: oklch(74.6% 0.111 173.7);
+        --accent-8: oklch(66.8% 0.139 173.7);
+        --accent-9: oklch(73.2% 0.139 173.7);
+        --accent-10: oklch(69.6% 0.139 173.7);
+        --accent-11: oklch(45.9% 0.124 173.7);
+        --accent-12: oklch(35% 0.066 173.7);
+
+        --accent-a1: color(display-p3 0.016 0.643 0.329 / 0.025);
+        --accent-a2: color(display-p3 0.012 0.596 0.306 / 0.054);
+        --accent-a3: color(display-p3 0.004 0.733 0.455 / 0.14);
+        --accent-a4: color(display-p3 0.004 0.714 0.475 / 0.227);
+        --accent-a5: color(display-p3 0.004 0.682 0.443 / 0.313);
+        --accent-a6: color(display-p3 0.004 0.631 0.42 / 0.408);
+        --accent-a7: color(display-p3 0 0.58 0.396 / 0.531);
+        --accent-a8: color(display-p3 0 0.541 0.38 / 0.68);
+        --accent-a9: color(display-p3 0 0.643 0.459 / 0.634);
+        --accent-a10: color(display-p3 0 0.584 0.416 / 0.663);
+        --accent-a11: color(display-p3 0 0.286 0.196 / 0.819);
+        --accent-a12: color(display-p3 0 0.18 0.133 / 0.889);
+
+        --accent-contrast: #fff;
+        --accent-surface: color(display-p3 0.886 0.933 0.914 / 0.8);
+        --accent-indicator: oklch(73.2% 0.139 173.7);
+        --accent-track: oklch(73.2% 0.139 173.7);
+      }
+    }
+  }
+
+  .dark {
+    --accent-1: #050c09;
+    --accent-2: #0f1b17;
+    --accent-3: #0a2d25;
+    --accent-4: #003c2f;
+    --accent-5: #02493a;
+    --accent-6: #0d5848;
+    --accent-7: #146b58;
+    --accent-8: #13816a;
+    --accent-9: #03c4a1;
+    --accent-10: #00b896;
+    --accent-11: #34d7b3;
+    --accent-12: #a6f2db;
+
+    --accent-a1: #cd000005;
+    --accent-a2: #effcd70f;
+    --accent-a3: #45fdce22;
+    --accent-a4: #00fdc332;
+    --accent-a5: #05fdc740;
+    --accent-a6: #27fdcd50;
+    --accent-a7: #31fdcf64;
+    --accent-a8: #26fdd07b;
+    --accent-a9: #04ffd1c1;
+    --accent-a10: #00fecfb5;
+    --accent-a11: #3effd4d5;
+    --accent-a12: #affee6f2;
+
+    --accent-contrast: #fff;
+    --accent-surface: #1d292380;
+    --accent-indicator: #03c4a1;
+    --accent-track: #03c4a1;
+  }
+
+  @supports (color: color(display-p3 1 1 1)) {
+    @media (color-gamut: p3) {
+      .dark {
+        --accent-1: oklch(14.4% 0.014 173.7);
+        --accent-2: oklch(20.9% 0.019 173.7);
+        --accent-3: oklch(27% 0.043 173.7);
+        --accent-4: oklch(31.5% 0.062 173.7);
+        --accent-5: oklch(36.1% 0.068 173.7);
+        --accent-6: oklch(41.3% 0.074 173.7);
+        --accent-7: oklch(47.3% 0.084 173.7);
+        --accent-8: oklch(53.9% 0.098 173.7);
+        --accent-9: oklch(73.2% 0.139 173.7);
+        --accent-10: oklch(69.6% 0.139 173.7);
+        --accent-11: oklch(78.9% 0.139 173.7);
+        --accent-12: oklch(90.5% 0.082 173.7);
+
+        --accent-a1: color(display-p3 0.992 0 0 / 0.012);
+        --accent-a2: color(display-p3 0.992 0.969 0.827 / 0.06);
+        --accent-a3: color(display-p3 0.529 0.996 0.835 / 0.129);
+        --accent-a4: color(display-p3 0.404 0.992 0.804 / 0.191);
+        --accent-a5: color(display-p3 0.431 1 0.816 / 0.244);
+        --accent-a6: color(display-p3 0.475 1 0.839 / 0.306);
+        --accent-a7: color(display-p3 0.498 1 0.847 / 0.381);
+        --accent-a8: color(display-p3 0.475 1 0.843 / 0.472);
+        --accent-a9: color(display-p3 0.463 1 0.843 / 0.744);
+        --accent-a10: color(display-p3 0.459 1 0.839 / 0.695);
+        --accent-a11: color(display-p3 0.51 1 0.855 / 0.823);
+        --accent-a12: color(display-p3 0.765 1 0.914 / 0.939);
+
+        --accent-contrast: #fff;
+        --accent-surface: color(display-p3 0.118 0.157 0.133 / 0.5);
+        --accent-indicator: oklch(73.2% 0.139 173.7);
+        --accent-track: oklch(73.2% 0.139 173.7);
+      }
+    }
+  }
+
+  :root {
+    --color-background: #f3f4f4;
+  }
+
+  .dark {
+    --color-background: #010d0b;
+  }
+
+  :root {
+    --neutral-1: #eef1f1;
+    --neutral-2: #e9ecec;
+    --neutral-3: #dfe3e3;
+    --neutral-4: #d6dbda;
+    --neutral-5: #ced3d2;
+    --neutral-6: #c5cac9;
+    --neutral-7: #b9bfbe;
+    --neutral-8: #a6acab;
+    --neutral-9: #737e7c;
+    --neutral-10: #697472;
+    --neutral-11: #4f5755;
+    --neutral-12: #162220;
+
+    --neutral-a1: #1f757506;
+    --neutral-a2: #0b3b3b0b;
+    --neutral-a3: #01262615;
+    --neutral-a4: #05271f1f;
+    --neutral-a5: #021d1627;
+    --neutral-a6: #041a1531;
+    --neutral-a7: #0116123d;
+    --neutral-a8: #01120f51;
+    --neutral-a9: #02151187;
+    --neutral-a10: #00131091;
+    --neutral-a11: #020d0aad;
+    --neutral-a12: #000d0be8;
+
+    --neutral-contrast: #ffffff;
+    --neutral-surface: #ffffffcc;
+    --neutral-indicator: #737e7c;
+    --neutral-track: #737e7c;
+  }
+
+  @supports (color: color(display-p3 1 1 1)) {
+    @media (color-gamut: p3) {
+      :root {
+        --neutral-1: oklch(95.6% 0.003 184.8);
+        --neutral-2: oklch(94.2% 0.004 184.8);
+        --neutral-3: oklch(91.3% 0.005 184.8);
+        --neutral-4: oklch(88.7% 0.005 184.8);
+        --neutral-5: oklch(86.2% 0.005 184.8);
+        --neutral-6: oklch(83.5% 0.006 184.8);
+        --neutral-7: oklch(79.9% 0.006 184.8);
+        --neutral-8: oklch(73.8% 0.007 184.8);
+        --neutral-9: oklch(58.4% 0.014 184.8);
+        --neutral-10: oklch(54.9% 0.013 184.8);
+        --neutral-11: oklch(44.8% 0.011 184.8);
+        --neutral-12: oklch(24% 0.017 184.8);
+
+        --neutral-a1: color(display-p3 0.031 0.267 0.267 / 0.017);
+        --neutral-a2: color(display-p3 0.027 0.133 0.133 / 0.038);
+        --neutral-a3: color(display-p3 0.012 0.114 0.114 / 0.079);
+        --neutral-a4: color(display-p3 0.008 0.114 0.078 / 0.116);
+        --neutral-a5: color(display-p3 0.008 0.09 0.063 / 0.149);
+        --neutral-a6: color(display-p3 0.008 0.071 0.051 / 0.186);
+        --neutral-a7: color(display-p3 0.004 0.075 0.055 / 0.235);
+        --neutral-a8: color(display-p3 0.004 0.055 0.043 / 0.313);
+        --neutral-a9: color(display-p3 0 0.067 0.051 / 0.519);
+        --neutral-a10: color(display-p3 0 0.063 0.047 / 0.56);
+        --neutral-a11: color(display-p3 0 0.043 0.031 / 0.671);
+        --neutral-a12: color(display-p3 0 0.039 0.031 / 0.898);
+
+        --neutral-contrast: #ffffff;
+        --neutral-surface: color(display-p3 1 1 1 / 80%);
+        --neutral-indicator: oklch(58.4% 0.014 184.8);
+        --neutral-track: oklch(58.4% 0.014 184.8);
+      }
+    }
+  }
+
+  .dark {
+    --neutral-1: #080a0a;
+    --neutral-2: #161818;
+    --neutral-3: #202322;
+    --neutral-4: #272a29;
+    --neutral-5: #2e3231;
+    --neutral-6: #363b3a;
+    --neutral-7: #434a49;
+    --neutral-8: #596260;
+    --neutral-9: #65716f;
+    --neutral-10: #737e7c;
+    --neutral-11: #adb7b5;
+    --neutral-12: #ecefee;
+
+    --neutral-a1: #e1000008;
+    --neutral-a2: #f58da216;
+    --neutral-a3: #f9bdc320;
+    --neutral-a4: #facbd027;
+    --neutral-a5: #fbdade2e;
+    --neutral-a6: #fce7e936;
+    --neutral-a7: #fdf5f743;
+    --neutral-a8: #fafefc5a;
+    --neutral-a9: #f1fdfc6a;
+    --neutral-a10: #f3fdfb78;
+    --neutral-a11: #f5fefcb4;
+    --neutral-a12: #fcfefdef;
+
+    --neutral-contrast: #ffffff;
+    --neutral-surface: rgba(0, 0, 0, 0.05);
+    --neutral-indicator: #65716f;
+    --neutral-track: #65716f;
+  }
+
+  @supports (color: color(display-p3 1 1 1)) {
+    @media (color-gamut: p3) {
+      .dark {
+        --neutral-1: oklch(14.4% 0.004 184.8);
+        --neutral-2: oklch(20.8% 0.004 184.8);
+        --neutral-3: oklch(25.1% 0.004 184.8);
+        --neutral-4: oklch(28.2% 0.005 184.8);
+        --neutral-5: oklch(31.2% 0.006 184.8);
+        --neutral-6: oklch(34.8% 0.007 184.8);
+        --neutral-7: oklch(40.2% 0.008 184.8);
+        --neutral-8: oklch(48.8% 0.011 184.8);
+        --neutral-9: oklch(53.8% 0.015 184.8);
+        --neutral-10: oklch(58.4% 0.014 184.8);
+        --neutral-11: oklch(77% 0.011 184.8);
+        --neutral-12: oklch(94.9% 0.003 184.8);
+
+        --neutral-a1: color(display-p3 0.996 0 0 / 0.02);
+        --neutral-a2: color(display-p3 0.996 0.62 0.718 / 0.076);
+        --neutral-a3: color(display-p3 0.992 0.773 0.796 / 0.12);
+        --neutral-a4: color(display-p3 1 0.827 0.847 / 0.147);
+        --neutral-a5: color(display-p3 1 0.882 0.898 / 0.175);
+        --neutral-a6: color(display-p3 1 0.925 0.937 / 0.207);
+        --neutral-a7: color(display-p3 1 0.976 0.988 / 0.258);
+        --neutral-a8: color(display-p3 0.992 1 0.992 / 0.352);
+        --neutral-a9: color(display-p3 0.961 0.996 0.992 / 0.414);
+        --neutral-a10: color(display-p3 0.969 1 0.992 / 0.467);
+        --neutral-a11: color(display-p3 0.973 1 0.992 / 0.703);
+        --neutral-a12: color(display-p3 0.996 1 0.996 / 0.934);
+
+        --neutral-contrast: #ffffff;
+        --neutral-surface: color(display-p3 0 0 0 / 5%);
+        --neutral-indicator: oklch(53.8% 0.015 184.8);
+        --neutral-track: oklch(53.8% 0.015 184.8);
+      }
+    }
+  }
+
+  /* SHIKI */
+  /* .dark .astro-code, */
+  /* .dark .astro-code span { */
+  /* color: var(--shiki-dark) !important; */
+  /* background-color: var(--shiki-dark-bg) !important; */
+  /* Optional, if you also want font styles */
+  /* font-style: var(--shiki-dark-font-style) !important; */
+  /* font-weight: var(--shiki-dark-font-weight) !important; */
+  /* text-decoration: var(--shiki-dark-text-decoration) !important; */
+  /* } */
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 0%;
+    }
+    80% {
+      background-position: 100% 0%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+}

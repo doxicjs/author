@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content'
+import BaseLayout from '@/layout/base.astro'
+import { dxText } from '@/lib/dx/text'
+
+const pages = await getCollection('devlog')
+---
+
+<BaseLayout>
+	<ul class="w-full max-w-screen-sm mx-auto list-inside list-disc py-12">
+		{
+			pages.map((page) => (
+				<li class={dxText('body-01')}>
+					<a href={`/devlog/${page.slug}`}>{page.data.title}</a>
+				</li>
+			))
+		}
+	</ul>
+</BaseLayout>
