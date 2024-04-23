@@ -313,4 +313,8 @@
       background-position: 0% 0%;
     }
   }
+
+  *:focus-visible {
+    @apply outline outline-primary-12 outline-offset-2;
+  }
 }

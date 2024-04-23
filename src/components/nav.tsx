@@ -1,6 +1,7 @@
-import { cn } from '@/lib/utils'
 import { useEffect, useState } from 'react'
+import { cn } from '@/lib/utils'
 import { NAV_HEIGHT } from '@/shared/constants/ui'
+import ThemeToggle from './themeToggle'
 
 export default function Navbar() {
   const [isShown, setIsShown] = useState(false)
@@ -34,13 +35,19 @@ export default function Navbar() {
       }}
     >
       <nav
-        className={cn('w-full px-4 grow max-w-screen-2xl flex items-center')}
+        className={cn(
+          'w-full px-4 grow max-w-screen-2xl flex items-center justify-between'
+        )}
       >
         <ul>
           <li>
             <a href="/">Home</a>
           </li>
         </ul>
+
+        <div>
+          <ThemeToggle />
+        </div>
       </nav>
     </header>
   )
