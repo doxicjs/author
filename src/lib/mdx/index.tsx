@@ -1,4 +1,5 @@
 // CUSTOM
+import * as React from 'react'
 import { Spotify } from './embeds'
 import { dxText } from '../dx/text'
 import { cn } from '../utils'
@@ -58,36 +59,14 @@ export const components = {
       {...props}
     />
   ),
-  pre: ({
-    className,
-    __rawString__,
-    ...props
-  }: React.HTMLAttributes<HTMLPreElement> & {
-    __rawString__?: string
-  }) => (
-    <div className="relative">
-      <button
-        className={dxText(
-          'body-compact-01',
-          'absolute top-5 right-5 bg-primary-9 text-primary-contrast px-3 py-2 rounded'
-        )}
-        onClick={() => {
-          console.log(__rawString__)
-          if (props.children) {
-            // navigator.clipboard.writeText(props.children?.toString())
-          }
-        }}
-      >
-        Copy
-      </button>
-      <pre
-        className={cn(
-          'mt-6 overflow-x-auto rounded border p-5 [&_code]:bg-transparent [&_code]:px-0 astro-code',
-          className
-        )}
-        {...props}
-      />
-    </div>
+  pre: ({ className, ...props }: React.HTMLAttributes<HTMLPreElement>) => (
+    <pre
+      className={cn(
+        'mt-6 overflow-x-auto rounded border p-5 [&_code]:bg-transparent [&_code]:px-0 astro-code',
+        className
+      )}
+      {...props}
+    />
   ),
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code

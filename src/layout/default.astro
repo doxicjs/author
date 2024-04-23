@@ -1,0 +1,11 @@
+---
+import BaseLayout from './base.astro'
+import NavBar from '@/components/nav'
+---
+
+<BaseLayout>
+	<NavBar client:load transition:persist />
+	<div class="grow flex flex-col w-full bg-gradient-to-b from-primary-2">
+		<slot />
+	</div>
+</BaseLayout>

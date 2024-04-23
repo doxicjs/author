@@ -1,33 +1,47 @@
-export default function Nav() {
-  const handleDark = () => {
-    localStorage.setItem('theme', 'dark')
-    document.documentElement.classList.add('dark')
-  }
+import { cn } from '@/lib/utils'
+import { useEffect, useState } from 'react'
+import { NAV_HEIGHT } from '@/shared/constants/ui'
 
-  const handleLight = () => {
-    localStorage.setItem('theme', 'light')
-    document.documentElement.classList.remove('dark')
-  }
-
-  const handleSystem = () => {
-    localStorage.removeItem('theme')
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
+export default function Navbar() {
+  const [isShown, setIsShown] = useState(false)
+  useEffect(() => {
+    if (window.scrollY > NAV_HEIGHT) {
+      setIsShown(true)
     }
-  }
+    addEventListener('scroll', () => {
+      const onScroll = () => {
+        if (window.scrollY > NAV_HEIGHT && !isShown) {
+          setIsShown(true)
+        } else {
+          setIsShown(false)
+        }
+      }
+      window.removeEventListener('scroll', onScroll)
+      window.addEventListener('scroll', onScroll)
+      return () => window.removeEventListener('scroll', onScroll)
+    })
+  }, [])
   return (
-    <div className="flex gap-1">
-      <button onClick={handleDark} className="bg-primary-5 border p-1">
-        Dark
-      </button>
-      <button onClick={handleLight} className="bg-primary-5 border p-1">
-        Light
-      </button>
-      <button onClick={handleSystem} className="bg-primary-5 border p-1">
-        System
-      </button>
-    </div>
+    <header
+      className={cn(
+        'fixed flex flex-col items-center w-full z-10',
+        isShown && ''
+      )}
+      style={{
+        top: 0,
+        left: 0,
+        height: NAV_HEIGHT,
+      }}
+    >
+      <nav
+        className={cn('w-full px-4 grow max-w-screen-2xl flex items-center')}
+      >
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   )
 }

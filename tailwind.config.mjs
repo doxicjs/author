@@ -82,7 +82,7 @@ module.exports = {
 		},
 		borderWidth: {
 			"0": "0px",
-			"1": "1px",
+			DEFAULT: "1px",
 			"3": "3px",
 
 		},
@@ -97,6 +97,7 @@ module.exports = {
 		},
 		colors: {
 			transparent: "transparent",
+			current: 'currentColor',
 			background: "var(--color-background)",
 			primary: {
 				// SOLID VERSIONS
@@ -171,6 +172,11 @@ module.exports = {
 			"lg": "1056px",
 			"xl": "1312px",
 			"2xl": "1584px",
+		},
+		extend: {
+			borderColor: {
+				DEFAULT: "var(--neutral-a6)",
+			}
 		}
 	},
 	plugins: [require('tailwindcss-animate')],

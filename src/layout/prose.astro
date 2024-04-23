@@ -1,10 +1,23 @@
 ---
-import BaseLayout from "./base.astro";
-const { title } = Astro.props;
+import DefaultLayout from '@/layout/default.astro'
+import TOC from '@/components/toc'
+import type { MarkdownHeading } from 'astro'
+
+type TProps = {
+	title: string
+	headings: MarkdownHeading[]
+}
+const { title, headings } = Astro.props as TProps
 ---
 
-<BaseLayout title={title}>
-	<main class="grow max-w-prose w-full px-4 mx-auto py-12">
-		<slot />
-	</main>
-</BaseLayout>
+<DefaultLayout title={title}>
+	<div
+		class="flex grow w-full max-w-screen-2xl mx-auto px-4 py-12 relative justify-between"
+	>
+		<TOC.Spacer client:load />
+		<main class="grow max-w-prose w-full relative mx-auto">
+			<slot />
+		</main>
+		<TOC.Root headings={headings} client:load />
+	</div>
+</DefaultLayout>

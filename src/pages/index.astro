@@ -1,7 +1,11 @@
 ---
-import BaseLayout from "@/layout/base.astro";
+import DefaultLayout from '@/layout/default.astro'
 ---
 
-<BaseLayout>
-	<h1>Astro</h1>
-</BaseLayout>
+<DefaultLayout>
+	<main class="grow w-full max-w-screen-xl mx-auto px-4 py-12">
+		<h1>Astro</h1>
+
+		<a href="/devlog">Devlog</a>
+	</main>
+</DefaultLayout>

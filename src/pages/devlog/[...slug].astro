@@ -12,9 +12,9 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props
-const { Content } = await entry.render()
+const { Content, headings } = await entry.render()
 ---
 
-<ProseLayout title={entry.data.title}>
+<ProseLayout title={entry.data.title} headings={headings}>
 	<Content components={components} />
 </ProseLayout>

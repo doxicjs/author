@@ -1,12 +1,12 @@
 ---
 import { getCollection } from 'astro:content'
-import BaseLayout from '@/layout/base.astro'
+import DefaultLayout from '@/layout/default.astro'
 import { dxText } from '@/lib/dx/text'
 
 const pages = await getCollection('devlog')
 ---
 
-<BaseLayout>
+<DefaultLayout>
 	<ul class="w-full max-w-screen-sm mx-auto list-inside list-disc py-12">
 		{
 			pages.map((page) => (
@@ -16,4 +16,4 @@ const pages = await getCollection('devlog')
 			))
 		}
 	</ul>
-</BaseLayout>
+</DefaultLayout>

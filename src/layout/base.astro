@@ -1,6 +1,6 @@
 ---
 import '@/styles/globals.css'
-import Nav from '@/components/nav'
+import { ViewTransitions } from 'astro:transitions'
 const { title } = Astro.props
 ---
 
@@ -33,17 +33,18 @@ const { title } = Astro.props
 			/>
 		</noscript>
 		{/* FONT END */}
-
-		<script is:inline>
-			if (localStorage.theme === 'dark') {
+		<script is:inline data-astro-rerun>
+			if (localStorage.getItem('theme') === 'dark') {
 				document.documentElement.classList.add('dark')
 			} else {
 				document.documentElement.classList.remove('dark')
 			}
+		</script>
+		<script is:inline>
 			window
 				.matchMedia('(prefers-color-scheme: dark)')
 				.addEventListener('change', ({ matches }) => {
-					if ('theme' in localStorage) return
+					if (localStorage.getItem('theme')) return
 
 					if (matches) {
 						document.documentElement.classList.add('dark')
@@ -52,6 +53,7 @@ const { title } = Astro.props
 					}
 				})
 		</script>
+		<ViewTransitions />
 	</head>
 	<body
 		class="antialiased bg-background text-neutral-12 font-display flex min-h-screen w-full flex-col"
@@ -59,7 +61,6 @@ const { title } = Astro.props
 			'min-height': '100dvh',
 		}}
 	>
-		<Nav client:load />
 		<slot />
 	</body>
 </html>
