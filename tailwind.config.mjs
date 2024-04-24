@@ -99,6 +99,8 @@ module.exports = {
 			transparent: "transparent",
 			current: 'currentColor',
 			background: "var(--color-background)",
+			white: "#fff",
+			black: "#000",
 			primary: {
 				// SOLID VERSIONS
 				"1": "var(--accent-1)",

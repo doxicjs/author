@@ -36,7 +36,7 @@
     --accent-track: #03c4a1;
   }
 
-  @supports (color: color(display-p3 1 1 1)) {
+  /* @supports (color: color(display-p3 1 1 1)) {
     @media (color-gamut: p3) {
       :root {
         --accent-1: oklch(95.6% 0.007 173.7);
@@ -71,7 +71,7 @@
         --accent-track: oklch(73.2% 0.139 173.7);
       }
     }
-  }
+  } */
 
   .dark {
     --accent-1: #050c09;
@@ -106,7 +106,7 @@
     --accent-track: #03c4a1;
   }
 
-  @supports (color: color(display-p3 1 1 1)) {
+  /* @supports (color: color(display-p3 1 1 1)) {
     @media (color-gamut: p3) {
       .dark {
         --accent-1: oklch(14.4% 0.014 173.7);
@@ -141,7 +141,7 @@
         --accent-track: oklch(73.2% 0.139 173.7);
       }
     }
-  }
+  } */
 
   :root {
     --color-background: #f3f4f4;
@@ -184,7 +184,7 @@
     --neutral-track: #737e7c;
   }
 
-  @supports (color: color(display-p3 1 1 1)) {
+  /* @supports (color: color(display-p3 1 1 1)) {
     @media (color-gamut: p3) {
       :root {
         --neutral-1: oklch(95.6% 0.003 184.8);
@@ -219,7 +219,7 @@
         --neutral-track: oklch(58.4% 0.014 184.8);
       }
     }
-  }
+  } */
 
   .dark {
     --neutral-1: #080a0a;
@@ -254,7 +254,7 @@
     --neutral-track: #65716f;
   }
 
-  @supports (color: color(display-p3 1 1 1)) {
+  /* @supports (color: color(display-p3 1 1 1)) {
     @media (color-gamut: p3) {
       .dark {
         --neutral-1: oklch(14.4% 0.004 184.8);
@@ -289,7 +289,7 @@
         --neutral-track: oklch(53.8% 0.015 184.8);
       }
     }
-  }
+  } */
 
   /* SHIKI */
   /* .dark .astro-code, */

@@ -9,31 +9,31 @@ type TRootProps = {
 const Root = (props: TRootProps) => {
   return (
     <aside
-      className="sticky hidden lg:block rounded border overflow-hidden"
+      className="sticky hidden lg:block rounded border border-neutral-a6 overflow-hidden"
       style={{
         top: `${NAV_HEIGHT}px`,
         width: `${TOC_WIDTH}px`,
         height: 'max-content',
       }}
     >
-      <nav className="relative w-full grow rounded h-full">
-        <div className="px-3 py-2 border-b w-full">
+      <nav className="relative w-full grow rounded h-full flex flex-col">
+        <div className="px-3 py-2 border-b border-neutral-a6 w-full bg-background">
           <span className={dxText('heading-compact-01')}>
             Table of Contents
           </span>
         </div>
 
-        <ul className="grow">
+        <ul className="grow h-full">
           {props.headings.map((h) => {
             if (h.depth === 1) return
             return (
-              <li key={h.slug} className="mb-2 w-full">
+              <li key={h.slug} className="w-full">
                 <a
                   href={`#${h.slug}`}
-                  className="text-neutral-11 hover:text-primary-11 w-full relative block group"
+                  className="text-neutral-a11 hover:text-primary-a12 w-full relative block group hover:bg-neutral-a4 active:bg-neutral-a5 py-1"
                 >
                   <div
-                    className="bg-neutral-6 absolute group-hover:bg-primary-11"
+                    className="bg-neutral-a6 absolute group-hover:bg-primary-a12"
                     style={{
                       top: '50%',
                       left: 0,
