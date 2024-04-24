@@ -59,13 +59,15 @@ export default function ThemeToggle() {
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
-        <Button size="icon">{!loading && themeMap[theme].icon}</Button>
+        <Button size="icon" hasAlpha>
+          {!loading && themeMap[theme].icon}
+        </Button>
       </DropdownMenu.Trigger>
 
       <DropdownMenu.Portal>
         <DropdownMenu.Content
           align="end"
-          className="w-full border border-neutral-a6 rounded bg-neutral-3"
+          className="w-full border border-neutral-a6 rounded bg-neutral-3 overflow-hidden"
           sideOffset={8}
           style={{
             minWidth: '10rem',
