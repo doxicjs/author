@@ -17,10 +17,13 @@ const Root = (props: TRootProps) => {
       }}
     >
       <nav className="relative w-full grow rounded h-full flex flex-col">
-        <div className="px-3 py-2 border-b border-neutral-a6 w-full bg-background">
-          <span className={dxText('heading-compact-01')}>
-            Table of Contents
-          </span>
+        <div
+          className={dxText(
+            'heading-compact-01',
+            'p-3 border-b border-neutral-a6 w-full bg-background'
+          )}
+        >
+          Table of Contents
         </div>
 
         <ul className="grow h-full">
