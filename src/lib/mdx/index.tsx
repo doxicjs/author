@@ -3,6 +3,8 @@ import * as React from 'react'
 import { Spotify } from './embeds'
 import { dxText } from '../dx/text'
 import { cn } from '../utils'
+import Button from '../ui/button'
+import { Copy } from 'lucide-react'
 
 export const components = {
   a: ({
@@ -59,14 +61,32 @@ export const components = {
       {...props}
     />
   ),
-  pre: ({ className, ...props }: React.HTMLAttributes<HTMLPreElement>) => (
+  pre: ({
+    className,
+    children,
+    ...props
+  }: React.HTMLAttributes<HTMLPreElement>) => (
     <pre
       className={cn(
-        'mt-6 overflow-x-auto rounded border p-5 [&_code]:bg-transparent [&_code]:px-0 astro-code',
+        'mt-6 overflow-x-auto rounded border p-5 [&_code]:bg-transparent [&_code]:px-0 astro-code relative',
         className
       )}
       {...props}
-    />
+    >
+      <Button
+        data-is-copy
+        className="absolute"
+        variant="neutral"
+        size="icon"
+        style={{
+          top: 12,
+          right: 12,
+        }}
+      >
+        <Copy size={15} />
+      </Button>
+      {children}
+    </pre>
   ),
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
