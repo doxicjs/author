@@ -34,7 +34,10 @@ const { title } = Astro.props
 		</noscript>
 		{/* FONT END */}
 		<script is:inline data-astro-rerun>
-			if (localStorage.getItem('theme') === 'dark') {
+			if (
+				localStorage.getItem('theme') === 'dark' ||
+				window.matchMedia('(prefers-color-scheme: dark)').matches
+			) {
 				document.documentElement.classList.add('dark')
 			} else {
 				document.documentElement.classList.remove('dark')
