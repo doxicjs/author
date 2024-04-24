@@ -36,7 +36,8 @@ const { title } = Astro.props
 		<script is:inline data-astro-rerun>
 			if (
 				localStorage.getItem('theme') === 'dark' ||
-				window.matchMedia('(prefers-color-scheme: dark)').matches
+				(!localStorage.getItem('theme') &&
+					window.matchMedia('(prefers-color-scheme: dark)').matches)
 			) {
 				document.documentElement.classList.add('dark')
 			} else {
@@ -59,7 +60,7 @@ const { title } = Astro.props
 		<ViewTransitions />
 	</head>
 	<body
-		class="antialiased bg-background text-neutral-12 font-display flex min-h-screen w-full flex-col"
+		class="antialiased bg-background text-neutral-12 font-display flex min-h-screen w-full flex-col relative"
 		style={{
 			'min-height': '100dvh',
 		}}

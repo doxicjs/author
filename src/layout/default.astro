@@ -5,7 +5,5 @@ import NavBar from '@/components/nav'
 
 <BaseLayout>
 	<NavBar client:load transition:persist />
-	<div class="grow flex flex-col w-full bg-gradient-to-t from-primary-3">
-		<slot />
-	</div>
+	<slot />
 </BaseLayout>
