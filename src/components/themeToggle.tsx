@@ -76,7 +76,7 @@ export default function ThemeToggle() {
           <DropdownMenu.Label
             className={dxText(
               'heading-compact-01',
-              'px-3 py-2 border-neutral-6 border-b bg-neutral-1'
+              'px-3 py-2 border-neutral-6 border-b bg-background'
             )}
           >
             Change Theme
