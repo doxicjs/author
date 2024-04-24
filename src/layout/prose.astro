@@ -12,12 +12,17 @@ const { title, headings } = Astro.props as TProps
 
 <DefaultLayout title={title}>
 	<div
-		class="flex grow w-full max-w-screen-2xl mx-auto px-4 py-12 relative justify-between"
+		class="w-full grow h-full flex flex-col"
+		style="background: linear-gradient(to top, var(--accent-a3) 0%, transparent 100%);"
 	>
-		<TOC.Spacer client:load />
-		<main class="grow max-w-prose w-full relative mx-auto">
-			<slot />
-		</main>
-		<TOC.Root headings={headings} client:load />
+		<div
+			class="flex grow w-full max-w-screen-2xl mx-auto px-4 py-12 relative justify-between"
+		>
+			<TOC.Spacer client:load />
+			<main class="grow max-w-prose w-full relative mx-auto">
+				<slot />
+			</main>
+			<TOC.Root headings={headings} client:load />
+		</div>
 	</div>
 </DefaultLayout>
