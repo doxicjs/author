@@ -25,7 +25,7 @@ const Button = forwardRef<HTMLButtonElement, TProps>((props, ref) => {
       className={dxText(
         'body-compact-02',
         cn(
-          'border flex items-center rounded',
+          'border flex items-center rounded backdrop-blur',
           size == 'base' && 'px-3 py-2',
           size == 'icon' && 'size-7 justify-center',
           variant == 'primary' &&

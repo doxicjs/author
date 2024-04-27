@@ -16,7 +16,7 @@ const { Content, headings, remarkPluginFrontmatter } = await entry.render()
 ---
 
 <ProseLayout
-	title={entry.data.title}
+	entry={entry}
 	headings={headings}
 	readTime={remarkPluginFrontmatter.minutesRead}
 >

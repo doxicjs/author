@@ -21,6 +21,6 @@ export default defineConfig({
     gfm: false,
     remarkPlugins: [remarkReadingTime]
   }), react(), tailwind({
-    applyBaseStyles: false
+    applyBaseStyles: false,
   }), sitemap()]
 });

@@ -3,28 +3,52 @@ import DefaultLayout from '@/layout/default.astro'
 import TOC from '@/components/toc'
 import type { MarkdownHeading } from 'astro'
 import { dxText } from '@/lib/dx/text'
+import { format } from 'date-fns'
+import type { CollectionEntry } from 'astro:content'
 
 type TProps = {
 	title: string
 	headings: MarkdownHeading[]
-	readTime: string
+	readTime: number
+	entry: CollectionEntry<'devlog'>
 }
-const { title, headings, readTime } = Astro.props as TProps
+const { entry, headings, readTime } = Astro.props as TProps
 ---
 
-<DefaultLayout title={title}>
+<DefaultLayout>
 	<div
 		class="w-full grow h-full flex flex-col"
-		style="background: linear-gradient(to bottom, transparent, var(--accent-a3));"
+		style="background: radial-gradient(circle at 0% 0%, var(--accent-a3) 0%, var(--color-background), var(--accent-a3));"
 	>
-		<div class="w-full pt-12 px-4 bg-background dark:bg-primary-a3 border-b">
-			<div class="w-full max-w-screen-md mx-auto flex flex-col">
-				<span class={dxText('label-02', 'text-neutral-a11')}>{readTime}</span>
-				<h1 class={dxText('fluid-heading-06', 'mb-7 text-neutral-a12')}>
-					{title}
+		<div class="w-full pt-12 px-4 border-b border-neutral-a6">
+			<div class="w-full flex flex-col max-w-screen-md relative mx-auto">
+				<div class="space-x-2 mb-5">
+					<span
+						class={dxText(
+							'code-02',
+							'text-primary-a12 bg-primary-a3 lowercase w-max px-3 py-1 border border-primary-a6 rounded'
+						)}>{entry.collection}</span
+					>
+					<span class={dxText('label-01', 'text-primary-a6')}>•</span>
+					<span class={dxText('label-02', 'text-primary-a11')}
+						>{Math.round(readTime)}min</span
+					>
+					<span class={dxText('label-01', 'text-primary-a6')}>•</span>
+					<span class={dxText('label-02', 'text-primary-a11')}>
+						{format(entry.data.created_at, 'MMM dd, yyyy')}
+					</span>
+				</div>
+				<h1
+					class={dxText(
+						'fluid-heading-06',
+						'mb-7 bg-clip-text text-primary-12'
+					)}
+				>
+					{entry.data.title}
 				</h1>
 			</div>
 		</div>
+
 		<div
 			class="flex grow w-full max-w-screen-2xl mx-auto px-4 pt-6 pb-12 relative justify-between"
 		>
