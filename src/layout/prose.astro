@@ -2,24 +2,34 @@
 import DefaultLayout from '@/layout/default.astro'
 import TOC from '@/components/toc'
 import type { MarkdownHeading } from 'astro'
+import { dxText } from '@/lib/dx/text'
 
 type TProps = {
 	title: string
 	headings: MarkdownHeading[]
+	readTime: string
 }
-const { title, headings } = Astro.props as TProps
+const { title, headings, readTime } = Astro.props as TProps
 ---
 
 <DefaultLayout title={title}>
 	<div
 		class="w-full grow h-full flex flex-col"
-		style="background: linear-gradient(to top, var(--accent-a3) 0%, transparent 100%);"
+		style="background: linear-gradient(to bottom, transparent, var(--accent-a3));"
 	>
+		<div class="w-full pt-12 px-4 bg-background dark:bg-primary-a3 border-b">
+			<div class="w-full max-w-screen-md mx-auto flex flex-col">
+				<span class={dxText('label-02', 'text-neutral-a11')}>{readTime}</span>
+				<h1 class={dxText('fluid-heading-06', 'mb-7 text-neutral-a12')}>
+					{title}
+				</h1>
+			</div>
+		</div>
 		<div
-			class="flex grow w-full max-w-screen-2xl mx-auto px-4 py-12 relative justify-between"
+			class="flex grow w-full max-w-screen-2xl mx-auto px-4 pt-6 pb-12 relative justify-between"
 		>
 			<TOC.Spacer client:load />
-			<main class="grow max-w-prose w-full relative mx-auto">
+			<main class="grow max-w-screen-md w-full relative mx-auto">
 				<slot />
 			</main>
 			<TOC.Root headings={headings} client:load />

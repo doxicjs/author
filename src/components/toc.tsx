@@ -1,15 +1,20 @@
 import { dxText } from '@/lib/dx/text'
+import { cn } from '@/lib/utils'
 import { NAV_HEIGHT, TOC_WIDTH } from '@/shared/constants/ui'
 import type { MarkdownHeading } from 'astro'
 
 type TRootProps = {
+  className?: string
   headings: MarkdownHeading[]
 }
 
 const Root = (props: TRootProps) => {
   return (
     <aside
-      className="sticky hidden lg:block rounded border border-neutral-a6 overflow-hidden"
+      className={cn(
+        'sticky hidden lg:block rounded border border-neutral-a6 overflow-hidden',
+        props.className
+      )}
       style={{
         top: `${NAV_HEIGHT}px`,
         width: `${TOC_WIDTH}px`,
@@ -62,10 +67,14 @@ const Root = (props: TRootProps) => {
   )
 }
 
-const Spacer = () => {
+type TSpacerProps = {
+  className?: string
+}
+
+const Spacer = (props: TSpacerProps) => {
   return (
     <div
-      className="hidden xl:block"
+      className={cn('hidden xl:block', props.className)}
       style={{
         width: `${TOC_WIDTH}px`,
       }}

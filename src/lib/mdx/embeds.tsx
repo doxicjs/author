@@ -4,7 +4,7 @@ export const Spotify = (props: { src: string }) => (
       borderRadius: '0.75rem',
     }}
     src={props.src}
-    className="mt-6"
+    className="[&:not(:first-child)]:mt-6"
     width="100%"
     height="80"
     frame-border="0"

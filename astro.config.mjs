@@ -2,8 +2,10 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
-
 import sitemap from "@astrojs/sitemap";
+
+import { remarkReadingTime } from "./remark-reading-time.mjs"
+
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,7 +18,8 @@ export default defineConfig({
       wrap: true,
       theme: "poimandres"
     },
-    gfm: false
+    gfm: false,
+    remarkPlugins: [remarkReadingTime]
   }), react(), tailwind({
     applyBaseStyles: false
   }), sitemap()]
