@@ -14,6 +14,7 @@ const devlogSchema = baseSchema.extend({
   id: z.string(),
   previous_issue_id: z.string(),
   previous_created_at: z.date(),
+  spotify_playlist_id: z.string(),
 })
 
 export type TDevlogSchema = z.infer<typeof devlogSchema>

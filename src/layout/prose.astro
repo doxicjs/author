@@ -1,10 +1,17 @@
 ---
 import DefaultLayout from '@/layout/default.astro'
+
+// COMPONENTS
 import TOC from '@/components/toc'
-import type { MarkdownHeading } from 'astro'
+import Spotify from '@/components/spotify'
+
+// HELPERS
 import { dxText } from '@/lib/dx/text'
 import { format } from 'date-fns'
+
+// TYPES
 import type { CollectionEntry } from 'astro:content'
+import type { MarkdownHeading } from 'astro'
 
 type TProps = {
 	title: string
@@ -20,23 +27,30 @@ const { entry, headings, readTime } = Astro.props as TProps
 		class="w-full grow h-full flex flex-col"
 		style="background: radial-gradient(circle at 0% 0%, var(--accent-a3) 0%, var(--color-background), var(--accent-a3));"
 	>
-		<div class="w-full pt-12 px-4 border-b border-neutral-a6">
-			<div class="w-full flex flex-col max-w-screen-md relative mx-auto">
-				<div class="space-x-2 mb-5">
-					<span
-						class={dxText(
-							'code-02',
-							'text-primary-a12 bg-primary-a3 lowercase w-max px-3 py-1 border border-primary-a6 rounded'
-						)}>{entry.collection}</span
-					>
-					<span class={dxText('label-01', 'text-primary-a6')}>•</span>
-					<span class={dxText('label-02', 'text-primary-a11')}
-						>{Math.round(readTime)}min</span
-					>
-					<span class={dxText('label-01', 'text-primary-a6')}>•</span>
-					<span class={dxText('label-02', 'text-primary-a11')}>
-						{format(entry.data.created_at, 'MMM dd, yyyy')}
-					</span>
+		<div class="w-full pt-12 border-b border-neutral-a6 px-4">
+			<div class="w-full flex flex-col max-w-screen-md mx-auto">
+				<div class="flex gap-3 justify-between items-center mb-5">
+					<div class="space-x-2">
+						<span
+							class={dxText(
+								'code-02',
+								'text-primary-a12 bg-primary-a3 lowercase w-max px-3 py-1 border border-primary-a6 rounded'
+							)}>{entry.collection}</span
+						>
+						<span class={dxText('label-01', 'text-primary-a6')}>•</span>
+						<span class={dxText('label-02', 'text-primary-a11')}
+							>{Math.round(readTime)}min</span
+						>
+						<span class={dxText('label-01', 'text-primary-a6')}>•</span>
+						<span class={dxText('label-02', 'text-primary-a11')}>
+							{format(entry.data.created_at, 'MMM dd, yyyy')}
+						</span>
+					</div>
+					{
+						entry.data.spotify_playlist_id && (
+							<Spotify client:load id={entry.data.spotify_playlist_id} />
+						)
+					}
 				</div>
 				<h1
 					class={dxText(
@@ -50,7 +64,7 @@ const { entry, headings, readTime } = Astro.props as TProps
 		</div>
 
 		<div
-			class="flex grow w-full max-w-screen-2xl mx-auto px-4 pt-6 pb-12 relative justify-between"
+			class="flex grow w-full max-w-screen-2xl mx-auto px-4 pt-11 pb-12 relative justify-between"
 		>
 			<TOC.Spacer client:load />
 			<main class="grow max-w-screen-md w-full relative mx-auto">

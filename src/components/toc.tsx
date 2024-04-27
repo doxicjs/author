@@ -1,7 +1,9 @@
 import { dxText } from '@/lib/dx/text'
+import Button from '@/lib/ui/button'
 import { cn } from '@/lib/utils'
 import { NAV_HEIGHT, TOC_WIDTH } from '@/shared/constants/ui'
 import type { MarkdownHeading } from 'astro'
+import { ArrowUp } from 'lucide-react'
 
 type TRootProps = {
   className?: string
@@ -9,6 +11,12 @@ type TRootProps = {
 }
 
 const Root = (props: TRootProps) => {
+  const handleScrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }
   return (
     <aside
       className={cn(
@@ -25,10 +33,14 @@ const Root = (props: TRootProps) => {
         <div
           className={dxText(
             'heading-compact-01',
-            'p-3 border-b border-neutral-a6 w-full bg-background'
+            'px-3 border-b border-neutral-a6 w-full bg-background flex items-center justify-between'
           )}
+          style={{ height: '35px' }}
         >
           Table of Contents
+          <Button variant="text" size="icon-sm" onClick={handleScrollTop}>
+            <ArrowUp size={15} />
+          </Button>
         </div>
 
         <ul className="grow h-full">

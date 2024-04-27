@@ -1,6 +1,5 @@
 // CUSTOM
 import * as React from 'react'
-import { Spotify } from './embeds'
 import { dxText } from '../dx/text'
 import { cn } from '../utils'
 import Button from '../ui/button'
@@ -33,7 +32,10 @@ export const components = {
   ),
   h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h2
-      className={dxText('heading-04', cn('text-neutral-12 mt-11', className))}
+      className={dxText(
+        'heading-04',
+        cn('text-neutral-12 [&:not(:first-child)]:mt-11', className)
+      )}
       {...props}
     />
   ),
@@ -76,7 +78,7 @@ export const components = {
       <Button
         data-is-copy
         className="absolute"
-        variant="neutral"
+        color="neutral"
         size="icon"
         style={{
           top: 12,
@@ -152,5 +154,5 @@ export const components = {
       />
     </div>
   ),
-  Spotify: Spotify,
+  // Spotify: Spotify,
 }
