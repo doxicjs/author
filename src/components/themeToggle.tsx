@@ -59,9 +59,7 @@ export default function ThemeToggle() {
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
-        <Button size="icon" hasAlpha>
-          {!loading && themeMap[theme].icon}
-        </Button>
+        <Button size="icon">{!loading && themeMap[theme].icon}</Button>
       </DropdownMenu.Trigger>
 
       <DropdownMenu.Portal>
@@ -89,8 +87,8 @@ export default function ThemeToggle() {
               className={dxText(
                 'body-compact-01',
                 cn(
-                  'p-3 flex gap-3 items-center hover:bg-neutral-a4 active:bg-neutral-a5',
-                  key == theme && 'text-primary-12 bg-neutral-a3'
+                  'p-3 flex gap-3 items-center bg-neutral-3 hover:bg-neutral-4 active:bg-neutral-5',
+                  key == theme && 'text-primary-12 bg-neutral-5'
                 )
               )}
             >
